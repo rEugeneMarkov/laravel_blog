@@ -48,6 +48,24 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <form action="{{ route('main.index') }}">
+                        @csrf
+                        <input class="btn btn-outline-primary" type="submit" value="Главная">
+                    </form>
+                </li>
+            </ul>
+            @if( auth()->user()->role == 0)
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form action="{{ route('admin.main.index') }}">
+                            @csrf
+                            <input class="btn btn-outline-primary" type="submit" value="Админ">
+                        </form>
+                    </li>
+                </ul>
+            @endif  
+            <ul class="navbar-nav">
+                <li class="nav-item">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input class="btn btn-outline-primary" type="submit" value="Выйти">

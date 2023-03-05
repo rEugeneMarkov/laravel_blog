@@ -5,9 +5,9 @@
         <div class="container">
             <h1 class="edicas-page-title" data-aos="fade-up">Категории</h1>
             <section class="featured-posts-section">
-                <ul>
+                <ul class="navbar-nav">
                     @foreach ($categories as $category)
-                        <li>
+                        <li class="navbar-nav">
                             <a href="{{ route('category.post.index', $category->id) }}">{{ $category->title }}</a>
                         </li>
                     @endforeach

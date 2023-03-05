@@ -44,7 +44,7 @@
                                             <tr>
                                                 <td>{{ $post->id }}</td>
                                                 <td>{{ $post->title }}</td>
-                                                <td><a href="{{ route('admin.post.show', $post->id) }}">
+                                                <td><a href="{{ route('post.show', $post->id) }}">
                                                         <i class="far fa-eye"></i></a>
                                                 </td>
                                                 <td>

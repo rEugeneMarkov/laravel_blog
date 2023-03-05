@@ -70,7 +70,13 @@
                                     </tbody>
                                 </table>
                             </div>
+                            
                             <!-- /.card-body -->
+                        </div>
+                        <div class="row">
+                            <div class="mx-auto mb-5">
+                                {{ $posts->links() }}
+                            </div>
                         </div>
                     </div>
                     <!-- ./col -->

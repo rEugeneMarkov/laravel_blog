@@ -48,6 +48,22 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <form action="{{ route('main.index') }}">
+                        @csrf
+                        <input class="btn btn-outline-primary" type="submit" value="Главная">
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form action="{{ route('personal.main.index') }}">
+                        @csrf
+                        <input class="btn btn-outline-primary" type="submit" value="Личный кабинет">
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input class="btn btn-outline-primary" type="submit" value="Выйти">
